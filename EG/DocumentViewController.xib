@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocumentViewController" customModule="EG" customModuleProvider="target">
+            <connections>
+                <outlet property="pdfView" destination="Gpg-EQ-i78" id="hiC-cC-KAT"/>
+                <outlet property="topview" destination="MAV-ii-OIL" id="MxA-f3-YU4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAV-ii-OIL">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDp-Rb-bgM">
+                            <rect key="frame" x="10" y="42.666666666666664" width="68" height="34.999999999999993"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="BACK">
+                                <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="gIl-uy-LYo"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vector1" translatesAutoresizingMaskIntoConstraints="NO" id="H0R-d2-jUg">
+                            <rect key="frame" x="274" y="0.0" width="119" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="2ZZ-pN-Zcc"/>
+                                <constraint firstAttribute="width" constant="119" id="A3M-7g-NEK"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website D..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwV-MM-ovj">
+                            <rect key="frame" x="151" y="71" width="91" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.96078425649999999" green="0.96078437569999997" blue="0.96078425649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86475223300000004" green="0.51399952169999996" blue="0.5137159228" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="cwV-MM-ovj" firstAttribute="centerX" secondItem="MAV-ii-OIL" secondAttribute="centerX" id="3gk-Ps-hm0"/>
+                        <constraint firstAttribute="height" constant="100" id="7l4-GU-PB8"/>
+                        <constraint firstItem="fDp-Rb-bgM" firstAttribute="leading" secondItem="MAV-ii-OIL" secondAttribute="leading" constant="10" id="BsB-si-X1X"/>
+                        <constraint firstItem="cwV-MM-ovj" firstAttribute="top" secondItem="MAV-ii-OIL" secondAttribute="top" constant="71" id="XUM-b9-tm5"/>
+                        <constraint firstAttribute="trailing" secondItem="H0R-d2-jUg" secondAttribute="trailing" id="Z4g-qg-a3M"/>
+                        <constraint firstItem="H0R-d2-jUg" firstAttribute="top" secondItem="MAV-ii-OIL" secondAttribute="top" id="hTb-mU-4JC"/>
+                        <constraint firstItem="fDp-Rb-bgM" firstAttribute="centerY" secondItem="MAV-ii-OIL" secondAttribute="centerY" constant="10" id="vM2-LJ-9Oo"/>
+                        <constraint firstAttribute="bottom" secondItem="H0R-d2-jUg" secondAttribute="bottom" id="xAx-gm-8a4"/>
+                        <constraint firstAttribute="bottom" secondItem="cwV-MM-ovj" secondAttribute="bottom" constant="8" id="xRa-e5-o7P"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpg-EQ-i78" customClass="PDFView">
+                    <rect key="frame" x="0.0" y="100" width="393" height="718"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Gpg-EQ-i78" firstAttribute="top" secondItem="MAV-ii-OIL" secondAttribute="bottom" id="4Vc-3P-yKG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gpg-EQ-i78" secondAttribute="trailing" id="M7l-yd-2lH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gpg-EQ-i78" secondAttribute="bottom" id="SXO-8k-b3f"/>
+                <constraint firstItem="MAV-ii-OIL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eVB-RA-jGZ"/>
+                <constraint firstItem="Gpg-EQ-i78" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hYa-xR-QBz"/>
+                <constraint firstItem="MAV-ii-OIL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oLL-BN-wOb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MAV-ii-OIL" secondAttribute="trailing" id="uaL-g1-yzr"/>
+            </constraints>
+            <point key="canvasLocation" x="35.877862595419849" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="vector1" width="185" height="202"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
